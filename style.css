@@ -1,0 +1,136 @@
+body, main, header, nav, ul, li, a, aside, div, section, footer, span {
+  margin: 0;
+  padding: 0;
+}
+img {
+  max-width: 100%;
+  object-fit: cover;
+  background-size: cover;
+}
+ul, li, a {
+  text-decoration: none;
+  list-style: none;
+}
+
+main {
+  font-family: 'Merriweather', serif, Georgia, 'Times New Roman';
+}
+p, h1{
+  font-family: 'Open Sans', sans-serif, Arial;
+}
+body {
+  display: flex;
+  justify-content: center;
+  background: #F2E3D0;
+}
+main {
+  display: grid;
+  grid-template-columns: minmax(200px 1fr) 2fr;
+  grid-template-areas: "header header"
+                       "aside section"
+                       "footer footer";
+}
+header{
+  grid-area: header;
+  background: rgb(220, 220, 220);
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  border-radius: 5px 5px 5px 0;
+  box-shadow: 3px 3px rgba(0, 0, 0, 0.2);
+}
+[data-dataMenu=""] {
+  border: 3px solid #8C5D42;
+  border-radius: 8px;
+  box-shadow: 3px 3px rgba(0, 0, 0, 0.2);
+  padding: 27px;
+  margin-left: 20px;
+  position: relative;
+ 
+}
+[data-dataMenu=""]::before{
+  content: '';
+  width: 22px;
+  height: 2px;
+  border-top: 3px solid #8C5D42;
+  border-bottom: 3px solid #8C5D42;
+  position: absolute;
+  top: 20px;
+  left: 15px;
+}
+[data-dataMenu=""]::after{
+  content: '';
+  width: 22px;
+  border-bottom: 3px solid #8C5D42;
+  position: absolute;
+  bottom: 20px;
+  left: 15px;
+}
+[data-dataMenu=""]:hover {
+  background: #F2E3D0;
+  cursor: pointer;
+}
+
+[data-dropMenu=""] {
+  display: none;
+  position: absolute;
+  z-index: 100;
+  top: 59px;
+  background: rgb(220, 220, 220);
+  box-shadow: 3px 3px rgba(0, 0, 0, 0.2);
+  border: 3px solid #8C5D42;
+  border-radius: 8px;
+} 
+[data-dropMenu=""]::before {
+  content: '';
+  width: 0;
+  height: 0;
+  border-left: 14px  solid transparent;
+  border-right: 14px solid transparent;
+  border-bottom: 14px solid #8C5D42;
+  position: absolute;
+  top: -14px;
+  left: 5px;
+}
+
+[data-dataMenu=""]:hover [data-dropMenu=""], [data-dropMenu=""].ativo {
+  display: initial;
+}
+
+[data-dropMenu=""] li {
+  padding: 10px;
+} 
+[data-dropMenu=""] a {
+  color: #707070;
+} 
+
+[data-dropMenu=""] li:hover {
+  background: #F2E3D0;
+}
+.sociais{
+  display: flex;
+  flex-wrap: wrap;
+}
+.sociais img {
+  border-radius: 8px;
+  box-shadow: 3px 3px rgba(0, 0, 0, 0.2);
+}
+.sociais img:hover {
+  background: #F2E3D0;
+}
+.sociais li {
+  margin-right: 20px;
+}
+aside{
+  grid-area: aside;
+  background: rgb(220, 220, 220);
+}
+section{
+  grid-area: section;
+}
+footer{
+  grid-area: footer;
+  background: rgb(220, 220, 220);
+}
