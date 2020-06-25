@@ -48,8 +48,9 @@ header{
   padding: 27px;
   margin-left: 20px;
   position: relative;
- 
+  
 }
+
 [data-dataMenu=""]::before{
   content: '';
   width: 22px;
@@ -81,7 +82,7 @@ header{
   background: rgb(220, 220, 220);
   box-shadow: 3px 3px rgba(0, 0, 0, 0.2);
   border: 3px solid #8C5D42;
-  border-radius: 8px;
+  border-radius: 8px
 } 
 [data-dropMenu=""]::before {
   content: '';
@@ -108,6 +109,7 @@ header{
 
 [data-dropMenu=""] li:hover {
   background: #F2E3D0;
+
 }
 .sociais{
   display: flex;
